@@ -1,5 +1,9 @@
 ### Hi there 👋
 
+This website I've created to test some features and writing trchnical blogs.
+
+Some images I've used so i'm giving them credit below.
+
 Credits:
 
     Demo Images:
