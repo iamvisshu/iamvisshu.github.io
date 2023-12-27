@@ -11598,6 +11598,54 @@ pre .code {
   background: #fcbec6;
 }
 
+/*Blogger CSS*/
+.blogger-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  opacity: .8;
+  color: #121111;
+}
+
+.blogger-mini {
+  position: relative;
+  min-height: 24rem;
+  height: 24rem;
+  padding: 1rem;
+}
+
+.blogger-mini::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../imgs/miniheader.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.blogger-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+/*END*/
+
+
+
 .section {
   padding: 80px 0;
 }
