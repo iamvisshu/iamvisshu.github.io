@@ -162,4 +162,7 @@ window.onload = function() {
   }, 1000);
 };
 
+// Disable right click script
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 
