@@ -1,0 +1,141 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #bfbfbf;
+    padding: 15px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px; /* Sets the height of the header */
+    visibility: hidden;  /* Sets blank the for initial lod of page */
+}
+
+#name-display {
+    margin-left: 20px;
+}
+
+#timer {
+    margin-right: 20px;
+    font-size: 1.2em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#name-container {
+    text-align: center;
+    position: absolute;
+    top: 30%; /* Adjust this value to reduce the gap between the timer and the name-container */
+    transform: translateY(-50%);
+}
+
+#quiz-container {
+    display: none;
+    background-color: #fff;
+    margin-top: 10px; /* Adjust this value to reduce the gap between the timer and the quiz container */
+    padding: 20px;
+    width: 90%; /* Increased from 80% to 90% */
+    max-width: 800px; /* Increased from 600px to 800px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+    display: none;
+    background-color: #fff;
+    margin-top: 50px;
+    padding: 20px;
+    width: 90%; /* Increased from 80% to 90% */
+    max-width: 800px; /* Increased from 600px to 800px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 100px;
+}
+
+#resultText {
+    text-align: center;
+}
+
+#question-count {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-right: 20px;
+    font-weight: bold; /* Sets the boldness question-count */
+}
+
+/* This is the Start, Save & Next button styling */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+button:disabled {
+    background-color: #ccc;
+}
+input[type="text"] {
+    border: 1px solid #000;
+}
+
+/* This is the close button styling */
+#close-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+/* This is the footer styling */
+footer {
+  background-color: #bfbfbf; /* Background color of the footer */
+  text-align: center; /* Aligns the text to the center */
+  padding: 10px; /* Padding around the footer */
+  position: fixed; /* Fixes the position of the footer */
+  left: 0; /* Positions the footer at the left of the page */
+  bottom: 0; /* Positions the footer at the bottom of the page */
+  width: 100%; /* Sets the width of the footer to 80% of the page width */
+  height: 30px; /* Sets the height of the footer */
+  font-size: 16px; /* Sets the font size */
+  font-family: Arial, sans-serif; /* Sets the font family */
+  margin-left: auto; /* Centers the footer horizontally */
+  margin-right: auto; /* Centers the footer horizontally */
+}
+
+/* This is the styling for div inside the footer */
+footer div {
+  display: flex; /* Makes the div a flex container */
+  justify-content: space-between; /* Distributes items evenly in the container */
+  padding-right: 20px; /* Padding on the right side of the div */
+  font-size: 13px; /* Sets the font size */
+  font-family: Arial, sans-serif; /* Sets the font family */
+}
+
+/* This is the styling for the datetime id */
+#datetime {
+  font-family: Arial, sans-serif; /* Sets the font family */
+  font-size: 13px; /* Sets the font size */
+}

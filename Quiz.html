@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This is website of Vishal Vishwakarma">
+    <meta name="author" content="@iamvisshu">
+    <title>@iamvisshu : Software Developer</title>
+     <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://iamvisshu.github.io/assets/imgs/favicon.png">
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Quiz styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/quizStyle.css">
+
+    <!-- Google Property -->
+    <meta name="google-site-verification" content="2CefnWi1xSuc48cwEzoVsX8MzqR19bZwNx2soYIwK1o" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iamvisshu.github.io/">
+    <meta property="og:title" content="@iamvisshu : Software Developer">
+    <meta property="og:description" content="This is website of Vishal Vishwakarma">
+    <meta property="og:image" content="https://iamvisshu.github.io/assets/imgs/avatar.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://iamvisshu.github.io/">
+    <meta property="twitter:title" content="@iamvisshu : Software Developer">
+    <meta property="twitter:description" content="This is website of Vishal Vishwakarma">
+    <meta property="twitter:image" content="https://iamvisshu.github.io/assets/imgs/avatar.jpg">
+
+</head>
+<body>  
+    <!-- header -->
+    <div id="header">
+        <span id="name-display"></span> <!-- Display User Input Name -->
+        <span id="question-count"></span> <!-- Questions visited element -->
+        <div id="timer">Time Left ⏱️: <span id="time-left"></span></div> <!-- Timer -->
+    </div>
+
+    <!-- Name Input -->
+    <div id="name-container">
+        <label for="name-input">Enter your name:</label>
+        <input type="text" id="name-input">
+        <button id="start-btn">Start Test</button> <!-- Start Quiz Button -->
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container">
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="next-btn">Save & Next</button>
+        <button id="finish-btn" disabled>Finish</button>  <!-- Finish Quiz Button -->
+    </div>
+
+    <!-- Result Display -->
+    <div id="result">
+        <div id="resultText"></div>
+            <button id="close-btn" style="display: none;">Close</button> <!-- Close Page Button -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <p>© <span id="year"></span> Created with ❤️ by <a href="https://github.com/iamvisshu" target="_blank">@iamvisshu</a> 
+            </p>
+            <p id="datetime"></p> <!-- Show Date and Time -->
+        </div>
+    </footer>
+
+    <!-- Quiz js -->
+    <script src="assets/js/quiz.js"></script>
+
+</body>
+</html>
