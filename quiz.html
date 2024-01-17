@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Java Mock Test is live. Welcome to the website of Vishal Vishwakarma (@iamvisshu), a dedicated software developer with a passion for coding and technology.">
+    <meta name="author" content="@iamvisshu">
+    <title>Mock Test Live</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://iamvisshu.github.io/assets/imgs/favicon.png">
+
+    <!-- Quiz styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/quizStyle.css">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iamvisshu.github.io/">
+    <meta property="og:title" content="@iamvisshu : Software Developer">
+    <meta property="og:description" content="Java Mock Test is live. Welcome to the website of Vishal Vishwakarma (@iamvisshu), a dedicated software developer with a passion for coding and technology.">
+    <meta property="og:image" content="https://iamvisshu.github.io/assets/imgs/avatar.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://iamvisshu.github.io/">
+    <meta property="twitter:title" content="@iamvisshu : Software Developer">
+    <meta property="twitter:description" content="Java Mock Test is live. Welcome to the website of Vishal Vishwakarma (@iamvisshu), a dedicated software developer with a passion for coding and technology.">
+    <meta property="twitter:image" content="https://iamvisshu.github.io/assets/imgs/avatar.jpg">
+
+    <!-- Language Meta-Tag -->
+    <meta http-equiv="content-language" content="en-us">
+
+</head>
+<body class="prevent-select">  
+    <!-- header -->
+    <div id="header">
+        <span id="name-display"></span> <!-- Display User Input Name -->
+        <span id="question-count"></span> <!-- Questions visited element -->
+        <div id="timer">Time Left ⏱️: <span id="time-left"></span></div> <!-- Timer -->
+    </div>
+
+    <!-- Name Input And Declaration -->
+    <div id="name-container">
+        <div class="test-name-style">JAVA : Mock Test !!</div>
+        <br><br><br><br>
+
+        <!-- Input Name -->
+        <label for="name-input">Enter your name:</label>
+        <input type="text" id="name-input">
+        <br><br><br><br>
+
+        <!-- Declaration and Checkbox -->
+        <div class="declaration-container">    
+            <label for="declaration-checkbox" class="declaration-text">
+                <input type="checkbox" id="declaration-checkbox">
+                "I, hereby declare that all the information submitted by me in the application form is correct, true, and valid. I also declare that I will abide by the rules and regulations of the online examination. I understand that any violation may result in disqualification."
+            </label>
+        </div>
+        <br>
+
+        <!-- Start Quiz Button -->
+        <button id="start-btn" disabled>Start Test</button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container">
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="next-btn">Save & Next</button>
+        <button id="finish-btn" disabled>Finish</button>  <!-- Finish Quiz Button -->
+    </div>
+
+    <!-- Result Display -->
+    <div id="result">
+        <div id="resultText"></div>
+        <button id="close-btn" style="display: none;">Close</button> <!-- Close Page Button -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <p>© <span id="year"></span> Created with ❤️ by <a href="https://github.com/iamvisshu" target="_blank">@iamvisshu</a> 
+            </p>
+            <p id="datetime"></p> <!-- Show Date and Time -->
+        </div>
+    </footer>
+
+    <!-- Quiz js -->
+    <script src="assets/js/quiz.js"></script>
+
+</body>
+</html>
