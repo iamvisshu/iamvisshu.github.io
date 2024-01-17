@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 80vh;
 }
 
 #header {
@@ -146,3 +146,31 @@ footer div {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+/* This is the styling for the Test Name on Main Page */
+.test-name-style {
+  color: black;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* This is the styling for the Declaration on Main Page */
+.declaration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.declaration-text {
+  font-family: Arial, sans-serif;
+  color: blue;
+  font-size: 12px;
+  max-width: 460px; /* or any specific width to make text multi-line */
+  text-align: justify; /* aligns the text to both left and right margins */
+}
+
+
+
+/*End of file*/

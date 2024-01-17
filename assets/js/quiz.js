@@ -9,7 +9,7 @@ const questions = [
     { question: 'Question 4: Test question four.', choices: ['A', 'B', 'C', 'D'], answer: 'B' },
     { question: 'Question 5: Test question five.', choices: ['A', 'B', 'C', 'D'], answer: ['A', 'B'] },
     // Add more questions as needed
-];
+    ];
 const startBtn = document.getElementById('start-btn');
 const nextBtn = document.getElementById('next-btn');
 const finishBtn = document.getElementById('finish-btn');
@@ -24,19 +24,28 @@ const choicesElement = document.getElementById('choices');
 const resultElement = document.getElementById('result');
 const timerElement = document.getElementById('time-left');
 
-// Start Quiz Button Action
-startBtn.addEventListener('click', () => {
-    const name = nameInput.value;
-    if (!name) {
-        alert('Please enter your name.');
-        return;
-    }
-    nameContainer.style.display = 'none';
-    document.getElementById('header').style.visibility = 'visible'; // Show the header
-    nameDisplay.innerHTML = '<b>Name:</b> ' + name;
-    questionContainer.style.display = 'block';
-    startQuiz();
-    fullScreen();
+// Declaration check
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Start Quiz Button Action
+    const startBtn = document.getElementById('start-btn');
+    startBtn.addEventListener('click', () => {
+        const name = document.getElementById('name-input').value;
+        if (!name) {
+            alert('Please enter your name.');
+            return;
+        }
+        document.getElementById('name-container').style.display = 'none';
+        document.getElementById('header').style.visibility = 'visible'; // Show the header
+        document.getElementById('name-display').innerHTML = '<b>Name:</b> ' + name;
+        document.getElementById('quiz-container').style.display = 'block';
+        startQuiz();
+        fullScreen();
+    });
+
+    // Checkbox Action
+    document.getElementById('declaration-checkbox').addEventListener('change', function() {
+        startBtn.disabled = !this.checked;
+    });
 });
 
 //Next button navigation and Finish button 
@@ -45,15 +54,15 @@ finishBtn.addEventListener('click', showResult);
 
 //Fullscreen code
 function fullScreen() {
-            var myObject = document.documentElement;
-            if (myObject.requestFullscreen) {
-                myObject.requestFullscreen();
+    var myObject = document.documentElement;
+    if (myObject.requestFullscreen) {
+        myObject.requestFullscreen();
             } else if (myObject.webkitRequestFullscreen) { /* Safari */
-                myObject.webkitRequestFullscreen();
+        myObject.webkitRequestFullscreen();
             } else if (myObject.msRequestFullscreen) { /* IE11 */
-                myObject.msRequestFullscreen();
-            }
-        }
+        myObject.msRequestFullscreen();
+    }
+}
 
 // Initialize Quiz
 function startQuiz() {
@@ -113,7 +122,7 @@ function showQuestion() {
     });
     // Update question count of Questions visited
     document.getElementById('question-count').innerHTML 
-        = `Question Summary<br> Visited : ${currentQuestionIndex + 1} Total : ${questions.length}`;
+    = `Question Summary<br> Visited : ${currentQuestionIndex + 1} Total : ${questions.length}`;
 
 }
 
@@ -159,10 +168,11 @@ window.onload = function() {
     let time = now.toLocaleTimeString('en-US', timeOptions);
     let datetime = date + ' ' + time;
     document.getElementById('datetime').innerHTML = datetime;
-  }, 1000);
+}, 1000);
 };
 
 // Disable right click script
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+//End of file
 
