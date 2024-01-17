@@ -139,3 +139,10 @@ footer div {
   font-family: Arial, sans-serif; /* Sets the font family */
   font-size: 13px; /* Sets the font size */
 }
+
+/* This is the used in body tag to prevent text selection on screen */
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
