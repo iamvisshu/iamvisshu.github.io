@@ -44,8 +44,9 @@
         <br><br><br><br>
 
         <!-- Input Name -->
-        <label for="name-input">Enter your name:</label>
-        <input type="text" id="name-input">
+	<label for="name-input">Enter your name:<span class="required">*</span></label>
+    <input type="text" id="name-input" name="name-input" required onchange="this.value = this.value.replace(/\s{2,}/g, ' ').trim();" maxlength="20">
+
         <br><br><br><br>
 
         <!-- Declaration and Checkbox -->

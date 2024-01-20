@@ -174,5 +174,16 @@ window.onload = function() {
 // Disable right click script
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+//Name Input Validation
+document.getElementById('name-input').addEventListener('keydown', function (e) {
+  var regex = /^[A-Za-z\s]*$/;
+  if (!regex.test(e.key) && e.key !== 'Backspace') {
+    e.preventDefault();
+  } else if (this.value.length >= 20 && e.key !== 'Backspace') {
+    e.preventDefault();
+    alert('Name input not allowed more than 20 characters !!');
+  }
+});
+
 //End of file
 

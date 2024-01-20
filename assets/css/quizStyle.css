@@ -1,4 +1,4 @@
-/* styles.css */
+/* quizStyle.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -163,6 +163,7 @@ footer div {
   align-items: center;
 }
 
+/*Decleration Text style*/
 .declaration-text {
   font-family: Arial, sans-serif;
   color: blue;
@@ -171,6 +172,9 @@ footer div {
   text-align: justify; /* aligns the text to both left and right margins */
 }
 
-
+/*Red Asterisk*/
+.required {
+  color: red;
+}
 
 /*End of file*/
