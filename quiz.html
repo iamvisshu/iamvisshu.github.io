@@ -66,8 +66,13 @@
     <div id="quiz-container">
         <div id="question"></div><br>
         <div id="choices"></div>
-        <button id="next-btn">Save & Next</button>
-        <button id="finish-btn" disabled>Finish</button>  <!-- Finish Quiz Button -->
+        <!-- Next Button -->
+        <button id="next-btn" title="Save and navigate to next questions.">Save & Next</button>
+        <!-- Finish Quiz Button -->
+        <button id="finish-btn" title="This button will enable on last question." disabled>Finish</button>
+        <!-- Quit Quiz Button -->
+        <button id="quit-btn" style="float: right;background-color: darkred;" title="Quit Button will end your quiz without any result.">Hard Quit</button>
+
     </div>
 
     <!-- Result Display -->

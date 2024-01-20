@@ -13,7 +13,7 @@ const questions = [
     { question: 'Question 7: Which component is used to compile, debug and execute the java programs?', choices: ['JRE', 'JIT', 'JDK', 'JVM'], answer: 'JDK' },
     { question: 'Question 8: Which of the following is a type of polymorphism in Java Programming?', choices: ['Multiple polymorphism', 'Compile time polymorphism', 'Multilevel polymorphism', 'Execution time polymorphism'], answer: 'Compile time polymorphism' },
     { question: 'Question 9: Which environment variable is used to set the java path?', choices: ['MAVEN_PATH', 'JAVA_PATH', 'JAVA', 'JAVA_HOME'], answer: 'JAVA_HOME' },
-    
+
     { question: 'Question 10: Which of the following options lead to the portability and security of Java?', choices: ['A: Bytecode is executed by JVM', 'B: The applet makes the Java code secure and portable', 'C: Use of exception handling', 'D: Dynamic binding between objects'], answer: ['A: Bytecode is executed by JVM', 'B: The applet makes the Java code secure and portable'] },
     { question: 'Question 11: Which of the following are valid declarations of a char in Java?', choices: ['A: char ch = \'\\utea\';', 'B: char ca = \'tea\';', 'C: char cr = \\u0223;', 'D: char cc = \'\\itea\';'], answer: ['A: char ch = \'\\utea\';', 'C: char cr = \\u0223;'] },
     { question: 'Question 12: What does the expression float a = 35 / 0 return in Java?', choices: ['A: 0', 'B: Not a Number', 'C: Infinity', 'D: Run time exception'], answer: ['B: Not a Number', 'C: Infinity'] },
@@ -24,6 +24,7 @@ const startBtn = document.getElementById('start-btn');
 const nextBtn = document.getElementById('next-btn');
 const finishBtn = document.getElementById('finish-btn');
 const closeBtn = document.getElementById('close-btn');
+const quitBtn = document.getElementById('quit-btn');
 
 const nameInput = document.getElementById('name-input');
 const nameContainer = document.getElementById('name-container');
@@ -174,6 +175,11 @@ function showResult() {
 //Close button on Finish
 closeBtn.addEventListener('click', () => {
     //window.close();
+    open(location, '_self').close();
+});
+
+//Close button on Finish
+quitBtn.addEventListener('click', () => {
     open(location, '_self').close();
 });
 
