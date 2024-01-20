@@ -176,5 +176,15 @@ footer div {
 .required {
   color: red;
 }
+/*Mobile Mode quiz opened warning*/
+#mobile-mode-warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    font-weight: bold;
+}
 
 /*End of file*/

@@ -24,8 +24,19 @@ const choicesElement = document.getElementById('choices');
 const resultElement = document.getElementById('result');
 const timerElement = document.getElementById('time-left');
 
+// This function checks if the user is on a mobile device
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 // Declaration check
 document.addEventListener('DOMContentLoaded', (event) => {
+
+    if (isMobileDevice()) {
+    alert('This quiz page is not supported in mobile browsers. Click OK !!');
+    //To disable the page
+     document.body.innerHTML = '<div id="mobile-mode-warning">⚠️!! Warning !!⚠️<br><br>This quiz page is not supported in mobile browsers.<br><br>Please Open in Desktop.<br><br> Contact : Admin (@iamvisshu)</div>';
+    }
+
     // Start Quiz Button Action
     const startBtn = document.getElementById('start-btn');
     startBtn.addEventListener('click', () => {
