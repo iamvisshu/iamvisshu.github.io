@@ -21,12 +21,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30px; /* Sets the height of the header */
+    height: 80px; /* Sets the height of the header */
     visibility: hidden;  /* Sets blank the for initial lod of page */
 }
 
 #name-display {
-    margin-left: 20px;
+    margin-left: 100px; /* Adjust this value as needed */
+}
+
+#profile-img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 63px;  /* Adjust this value to increase the width of the image */
+    height: 81px;  /* Adjust this value to increase the height of the image */
+    border-radius: 0%;  /* Adjust this value to make circular border of the image */
+    border: 2px solid #808080;  /* Add this line to create a grey border */
 }
 
 #timer {
