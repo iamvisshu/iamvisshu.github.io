@@ -74,6 +74,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 nextBtn.addEventListener('click', nextQuestion);
 finishBtn.addEventListener('click', showResult);
 
+//Clear Response
+const clearBtn = document.getElementById('clear-btn');
+clearBtn.addEventListener('click', () => {
+    const selectedChoices = document.querySelectorAll('input[name="choice"]:checked');
+    selectedChoices.forEach(choice => {
+        choice.checked = false;
+    });
+});
+
+
 //Fullscreen code
 function fullScreen() {
     var myObject = document.documentElement;
