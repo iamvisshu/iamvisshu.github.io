@@ -197,4 +197,11 @@ footer div {
     font-weight: bold;
 }
 
+/*scrollable code snippet in question*/
+pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    overflow-x: auto;
+}
+
 /*End of file*/

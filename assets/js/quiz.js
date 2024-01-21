@@ -17,7 +17,12 @@ const questions = [
     { question: 'Question 10: Which of the following options lead to the portability and security of Java?', choices: ['A: Bytecode is executed by JVM', 'B: The applet makes the Java code secure and portable', 'C: Use of exception handling', 'D: Dynamic binding between objects'], answer: ['A: Bytecode is executed by JVM', 'B: The applet makes the Java code secure and portable'] },
     { question: 'Question 11: Which of the following are valid declarations of a char in Java?', choices: ['A: char ch = \'\\utea\';', 'B: char ca = \'tea\';', 'C: char cr = \\u0223;', 'D: char cc = \'\\itea\';'], answer: ['A: char ch = \'\\utea\';', 'C: char cr = \\u0223;'] },
     { question: 'Question 12: What does the expression float a = 35 / 0 return in Java?', choices: ['A: 0', 'B: Not a Number', 'C: Infinity', 'D: Run time exception'], answer: ['B: Not a Number', 'C: Infinity'] },
-
+    { question: 'Question 13: What does the following JavaScript code output?', code: 'console.log("Hello, World!");', choices: ['Hello, World!', 'undefined', 'Error', 'No output'], answer: 'Hello, World!' },
+    { question: 'Question 14: What does the following JavaScript function do?', code: `function add(a, b) {\n    return a + b;\n}\nconsole.log(add(1, 2));`, choices: ['Adds two numbers', 'Subtracts two numbers', 'Multiplies two numbers', 'Divides two numbers'], answer: 'Adds two numbers' },
+    {
+        question: 'Question 15: What does the following Java code do?',
+        code: `public class HelloWorld {\n    public static void main(String[] args) {\n        for(int i = 0; i < 5; i++) {\n            System.out.println("Hello, World!");\n        }\n    }\n}`,
+        choices: ['Prints "Hello, World!" five times', 'Prints "Hello, World!" once', 'Prints "Hello, World!" infinitely', 'Does not print anything'], answer: 'Prints "Hello, World!" five times'},
     // Add more questions as needed
     ];
 const startBtn = document.getElementById('start-btn');
@@ -109,7 +114,7 @@ function fullScreen() {
 
 // Initialize Quiz
 function startQuiz() {
-    let timeLeft = 5 * 60; // 2 minutes
+    let timeLeft = 10 * 60; // 10 minutes
     timer = setInterval(() => {
         if (timeLeft <= 0) {
             clearInterval(timer);
@@ -149,6 +154,14 @@ function nextQuestion() {
 //Show questions on screen
 function showQuestion() {
     questionElement.textContent = questions[currentQuestionIndex].question;
+
+    // Create a new 'pre' element to display the code snippet
+    if (questions[currentQuestionIndex].code) {
+        const codeElement = document.createElement('pre');
+        codeElement.textContent = questions[currentQuestionIndex].code;
+        questionElement.appendChild(codeElement);
+    }
+
     choicesElement.innerHTML = '';
     questions[currentQuestionIndex].choices.forEach(choice => {
         const input = document.createElement('input');
@@ -164,7 +177,7 @@ function showQuestion() {
         choicesElement.appendChild(document.createElement('br'));
     });
     // Update question count of Questions visited
-    document.getElementById('question-count').innerHTML 
+    document.getElementById('question-count').innerHTML
     = `Question Summary<br> Visited : ${currentQuestionIndex + 1} Total : ${questions.length}`;
 
 }
