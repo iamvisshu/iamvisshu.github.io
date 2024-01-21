@@ -6,11 +6,11 @@ Some images,icons, css libraries etc I've used so I'm giving them credit below.
 
 Credits:
 
-    Demo Images:
-        Unsplash:       	(https://www.unsplash.com)
+   	 Demo Images:
+        	Unsplash:       		(https://www.unsplash.com)
 
-    Icons:
-		Themify Icons: 		(https://themify.me/themify-icons)
+   	 Icons:
+		Themify Icons: 			(https://themify.me/themify-icons)
 
 	Other:
 		JQuery: 			(https://www.jquery.com)
