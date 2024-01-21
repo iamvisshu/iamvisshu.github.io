@@ -135,9 +135,15 @@ function showQuestion() {
 
     // Create a new 'pre' element to display the code snippet
     if (questions[currentQuestionIndex].code) {
-        const codeElement = document.createElement('pre');
-        codeElement.textContent = questions[currentQuestionIndex].code;
-        questionElement.appendChild(codeElement);
+            const codeElement = document.createElement('pre');
+            const lines = questions[currentQuestionIndex].code.split('\n');
+            lines.forEach((line, index) => {
+                const lineElement = document.createElement('span');
+                lineElement.textContent = line;
+                codeElement.appendChild(lineElement);
+                codeElement.appendChild(document.createElement('br'));
+            });
+            questionElement.appendChild(codeElement);
     }
 
     choicesElement.innerHTML = '';
@@ -223,6 +229,17 @@ document.getElementById('name-input').addEventListener('keydown', function (e) {
     alert('Name input not allowed more than 20 characters !!');
   }
 });
+
+//Show number of lines of code snippet
+const lines = codeElement.textContent.split('\n');
+codeElement.textContent = '';
+lines.forEach(line => {
+    const lineElement = document.createElement('code');
+    lineElement.className = 'line-numbers';
+    lineElement.textContent = line;
+    codeElement.appendChild(lineElement);
+});
+
 
 //End of file
 
