@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-This website I've created to test some features and writing trchnical blogs.
+This website I've created to showcase my profile as software developer and writing technical blogs.
 
-Some images I've used so i'm giving them credit below.
+Some images,icons, css libraries etc I've used so I'm giving them credit below.
 
 Credits:
 
@@ -15,9 +15,9 @@ Credits:
 	Other:
 		JQuery: 			(https://www.jquery.com)
 		Bootstrap: 			(https://www.getbootstrap.com)
-		Bootstrap Affix: 	(http://getbootstrap.com/javascript/#affix)  
+		Bootstrap Affix: 			(http://getbootstrap.com/javascript/#affix)  
 		Isotope: 			(https://isotope.metafizzy.co/) 
-		Google Maps:		(https://maps.google.com)
+		Google Maps: 			(https://maps.google.com)
 <!--
 **iamvisshu/iamvisshu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
