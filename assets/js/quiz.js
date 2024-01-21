@@ -83,16 +83,27 @@ clearBtn.addEventListener('click', () => {
     });
 });
 
-
-//Fullscreen code
+// Fullscreen code
 function fullScreen() {
     var myObject = document.documentElement;
     if (myObject.requestFullscreen) {
-        myObject.requestFullscreen();
-            } else if (myObject.webkitRequestFullscreen) { /* Safari */
-        myObject.webkitRequestFullscreen();
-            } else if (myObject.msRequestFullscreen) { /* IE11 */
-        myObject.msRequestFullscreen();
+        myObject.requestFullscreen().then(() => {
+            if (navigator.keyboard) {
+                navigator.keyboard.lock();
+            }
+        });
+    } else if (myObject.webkitRequestFullscreen) { /* Safari */
+        myObject.webkitRequestFullscreen().then(() => {
+            if (navigator.keyboard) {
+                navigator.keyboard.lock();
+            }
+        });
+    } else if (myObject.msRequestFullscreen) { /* IE11 */
+        myObject.msRequestFullscreen().then(() => {
+            if (navigator.keyboard) {
+                navigator.keyboard.lock();
+            }
+        });
     }
 }
 
