@@ -39,28 +39,75 @@
         <div id="timer">Time Left ⏱️: <span id="time-left"></span></div> <!-- Timer -->
     </div>
 
+    <!-- Scroll buttons -->
+    <button id="scrollToTopButton">&#x2191;</button>
+    <button id="scrollToBottomButton">&#x2193;</button>
+
+    <!-- Exam Heading -->
+    <div class="test-name-style">
+        ONLINE EXAMINATION : Java Mock
+    </div>
+    <div class="quiz-heading-style">
+        Online Exam Guidelines for Candidate
+    </div>
+
+    <!-- Guidelines for Students -->
+    <div id="guidelines-container">
+        <p><strong>A. General Instructions -</strong></p>
+        <ol>
+            <li><strong>Attention !!</strong> Read all below instructions carefully before starting the exam.</li>
+            <li><strong>Technical Requirements:</strong> Ensure your device meets the technical requirements for the exam platform. This may include a stable internet connection, a webcam, a microphone, or specific software.</li>
+            <li><strong>Environment:</strong> Ensure you are in a quiet and well-lit environment to avoid distractions and ensure webcam clarity if required.</li>
+            <li><strong>Honesty Policy:</strong> Adhere to the honesty policy of your institution. This usually means that all work submitted should be your own, and any form of cheating or plagiarism is strictly prohibited.</li>
+            <li><strong>Start Exam:</strong> Enter your name and then read & accept the declaration, which will enable "Start Exam" button.</li>
+        </ol>
+
+        <p><strong>B. Question Paper -</strong></p>
+        <ol>
+            <li><strong>No. of Questions:</strong> There are total 15 questions. Questions visited and total questions will be shown on top right corner of screen.</li>
+            <li><strong>Time Allotted:</strong> Total time is given for this exam is 10 minutes. Timer will appear on top mid-section of screen.</li>
+            <li><strong>Marks:</strong> There is +1 Mark for each correct question and 0 Marks for un-attempted question. There is No negative marks on wrong question.</li>
+            <li><strong>Score:</strong> Total score of candidate will be shown at the end of exam on click of "Finish" button.</li>
+        </ol>
+
+        <p><strong>C. During the Exam -</strong></p>
+        <ol>
+            <li><strong>Navigation:</strong> Navigate through questions using the "Save & Next" button. Avoid using the browser's back button to prevent any loss of data.</li>
+            <li><strong>Changing Response:</strong> Use "Clear Response" button to deselect a chosen answer if you wish to change your response.</li>
+            <li><strong>Time Management:</strong> Be aware of the start time and duration of the exam. Make sure to allocate enough time to complete the exam without interruptions.</li>
+            <li><strong>Technical Issues:</strong> If you encounter any technical issues during the exam, contact your instructor or the technical support team immediately.</li>
+            <li><strong>Review:</strong> Review all answers before submitting, as you may not be able to retake or revise your answers after submission.</li>
+            <li><strong>Submission:</strong> Click "Finish" button to submit your exam. Ensure that you submit your answers before the time limit expires. Your exam will automatically submit your answers when the time is up.</li>
+            <li><strong>Close Exam:</strong> Click on the "Close" button which will appear at the end of your exam, to finish your exam successfully.</li>
+            <li><strong>Quit Exam:</strong> In case of any emergency, there is "Hard Quit" button which will end your exam (This will not give you any score and will end your exam with NO result).</li>
+            <li><strong>Feedback:</strong> After the exam, take the time to review your answers if this feature is available. This can provide valuable feedback for future exams.</li>
+
+        </ol>
+
+        <p><strong>Note:</strong> Remember, these are just general guidelines. Always check with your instructor or the exam guidelines provided by your institution. Good luck!</p>
+    </div>
+
+
     <!-- Name Input And Declaration -->
     <div id="name-container">
-        <div class="test-name-style">JAVA : Mock Test !!</div>
-        <br><br><br><br>
-
         <!-- Input Name -->
-	<label for="name-input">Enter your name:<span class="required">*</span></label>
-    <input type="text" id="name-input" name="name-input" required onchange="this.value = this.value.replace(/\s{2,}/g, ' ').trim();" maxlength="20">
-
-        <br><br><br><br>
+	<label for="name-input"><strong>Candidate Name:</strong><span class="required">*</span></label>
+    <input type="text" id="name-input" name="name-input" placeholder="Candidate Name (Max 20 Chars)" required onchange="this.value = this.value.replace(/\s{2,}/g, ' ').trim();" maxlength="20">
+        <br><br>
 
         <!-- Declaration and Checkbox -->
         <div class="declaration-container">    
             <label for="declaration-checkbox" class="declaration-text">
                 <input type="checkbox" id="declaration-checkbox">
-                "I, hereby declare that all the information submitted by me in the application form is correct, true, and valid. I also declare that I will abide by the rules and regulations of the online examination. I understand that any violation may result in disqualification."
+                Declaration : " I, hereby declare that all the information submitted by me in the application form is correct, true, and valid.
+                <p>I also declare that I will abide by the rules and regulations of the online examination.
+                I understand that any violation may result in disqualification."</p>
             </label>
         </div>
         <br>
 
         <!-- Start Quiz Button -->
-        <button id="start-btn" disabled>Start Test</button>
+        <button id="start-btn" disabled>Start Exam</button>
     </div>
 
     <!-- Quiz Container -->

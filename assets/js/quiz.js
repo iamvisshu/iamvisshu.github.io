@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             alert('Please enter your name.');
             return;
         }
+         // Add this line to hide the guidelines when the quiz starts
+        document.getElementById('guidelines-container').style.display = 'none';
+        document.getElementById('scrollToTopButton').style.display = 'none';
+        document.getElementById('scrollToBottomButton').style.display = 'none';
+        document.querySelector('.test-name-style').style.display = 'none';
+        document.querySelector('.quiz-heading-style').style.display = 'none';
         document.getElementById('name-container').style.display = 'none';
         document.getElementById('header').style.visibility = 'visible'; // Show the header
         document.getElementById('name-display').innerHTML = '<b>Name:</b> ' + name;
@@ -213,8 +219,25 @@ window.onload = function() {
     let time = now.toLocaleTimeString('en-US', timeOptions);
     let datetime = date + ' ' + time;
     document.getElementById('datetime').innerHTML = datetime;
-}, 1000);
+  }, 1000);
+
+  // Scroll button event listeners
+  document.getElementById('scrollToTopButton').addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  document.getElementById('scrollToBottomButton').addEventListener('click', function () {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
+
 };
+
 
 // Disable right click script
 document.addEventListener('contextmenu', event => event.preventDefault());
@@ -231,13 +254,30 @@ document.getElementById('name-input').addEventListener('keydown', function (e) {
 });
 
 //Show number of lines of code snippet
-const lines = codeElement.textContent.split('\n');
-codeElement.textContent = '';
-lines.forEach(line => {
-    const lineElement = document.createElement('code');
-    lineElement.className = 'line-numbers';
-    lineElement.textContent = line;
-    codeElement.appendChild(lineElement);
+if (typeof codeElement !== 'undefined') {
+    const lines = codeElement.textContent.split('\n');
+    codeElement.textContent = '';
+    lines.forEach(line => {
+        const lineElement = document.createElement('code');
+        lineElement.className = 'line-numbers';
+        lineElement.textContent = line;
+        codeElement.appendChild(lineElement);
+    });
+}
+
+//Scrolling code
+document.getElementById('scrollToTopButton').addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+document.getElementById('scrollToBottomButton').addEventListener('click', function () {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
 });
 
 

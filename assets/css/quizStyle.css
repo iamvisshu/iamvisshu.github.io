@@ -4,12 +4,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+    height: auto;
+    padding-bottom: 80px; /* Add this line. Adjust the value as needed */
 }
+
 
 #header {
     position: fixed;
@@ -48,16 +46,74 @@ body {
 }
 
 #name-container {
-    text-align: center;
-    position: absolute;
-    top: 50%; /* Adjust this value to reduce the gap between the timer and the name-container */
-    transform: translateY(-50%);
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 20px;
+    position: relative; /* Change from absolute to relative */
+    top: 0; /* Adjust this value to reduce the gap between the timer and the name-container */
+    margin-bottom: 20px;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+#guidelines-container {
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    font-size: 13px;
+    color: black;
+    margin-right: 20px;
+    margin-left: 20px;
+    line-height: 1.5; /* Adjust this value as needed */
+    position: relative; /* Change from absolute to relative */
+}
+
+/* This is the styling for the JAVA MOCK Heading on Main Page */
+.test-name-style {
+  margin-top: 10px;
+  color: black;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  background-color: #00B2FF;
+  height : 45px;
+  display: flex; /* Add this line */
+  align-items: center; /* Add this line */
+  justify-content: center; /* Add this line */
+}
+
+/* This is the styling for the Student Guidelines Header */
+.quiz-heading-style {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: black;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* This is the styling for the Declaration on Main Page */
+.declaration-container {
+  display: relative;
+  justify-content: center;
+  align-items: left;
+  margin-right: 20px;
+}
+
+/*Declaration Text style*/
+.declaration-text {
+  font-family: Arial, sans-serif;
+  color: #b30528;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: justify; /* aligns the text to both left and right margins */
 }
 
 #quiz-container {
     display: none;
     background-color: #fff;
-    margin-top: 10px; /* Adjust this value to reduce the gap between the timer and the quiz container */
+    margin-left: 250px;
+    margin-top: 200px; /* Adjust this value to reduce the gap between the timer and the quiz container */
     padding: 20px;
     width: 90%; /* Increased from 80% to 90% */
     max-width: 800px; /* Increased from 600px to 800px */
@@ -67,7 +123,8 @@ body {
 #result {
     display: none;
     background-color: #fff;
-    margin-top: 50px;
+    margin-left: 250px;
+    margin-top: 200px;
     padding: 20px;
     width: 90%; /* Increased from 80% to 90% */
     max-width: 800px; /* Increased from 600px to 800px */
@@ -103,6 +160,7 @@ button:disabled {
 }
 input[type="text"] {
     border: 1px solid #000;
+    width: 200px; /* Adjust this value as needed */
 }
 
 /* This is the close button styling */
@@ -157,31 +215,6 @@ footer div {
   user-select: none; /* Standard syntax */
 }
 
-/* This is the styling for the Test Name on Main Page */
-.test-name-style {
-  color: black;
-  font-size: 25px;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* This is the styling for the Declaration on Main Page */
-.declaration-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*Declaration Text style*/
-.declaration-text {
-  font-family: Arial, sans-serif;
-  color: blue;
-  font-size: 12px;
-  max-width: 460px; /* or any specific width to make text multi-line */
-  text-align: justify; /* aligns the text to both left and right margins */
-}
-
 /*Red Asterisk*/
 .required {
   color: red;
@@ -192,7 +225,6 @@ footer div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
     flex-direction: column;
     font-weight: bold;
@@ -217,6 +249,27 @@ pre span::before {
     text-align: right;
     padding-right: 10px;
     color: grey;
+}
+
+/* Scroll button */
+#scrollToTopButton, #scrollToBottomButton {
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10%; /* This will make the buttons round */
+    width: 32px; /* This will increase the width of the buttons */
+    height: 50px;
+}
+
+#scrollToTopButton {
+    top: 50px; /* Adjust this value as needed */
+    z-index: 9999; /* Adjust as needed */
+}
+
+#scrollToBottomButton {
+    bottom: 60px; /* Adjust this value as needed */
+    z-index: 9999; /* Adjust as needed */
 }
 
 /*End of file*/
