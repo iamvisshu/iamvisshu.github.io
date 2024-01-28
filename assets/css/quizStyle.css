@@ -70,12 +70,12 @@ body {
 /* This is the styling for the JAVA MOCK Heading on Main Page */
 .test-name-style {
   margin-top: 10px;
-  color: black;
+  color: white;
   font-size: 25px;
   font-family: Arial, sans-serif;
   text-align: center;
   font-weight: bold;
-  background-color: #00B2FF;
+  background-color: #007BFF;
   height : 45px;
   display: flex; /* Add this line */
   align-items: center; /* Add this line */
