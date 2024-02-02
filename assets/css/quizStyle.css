@@ -112,8 +112,10 @@ body {
 #quiz-container {
     display: none;
     background-color: #fff;
-    margin-left: 250px;
-    margin-top: 200px; /* Adjust this value to reduce the gap between the timer and the quiz container */
+    position: absolute; /* Added this line */
+    top: 50%; /* Added this line */
+    left: 50%; /* Added this line */
+    transform: translate(-50%, -50%); /* Added this line */
     padding: 20px;
     width: 90%; /* Increased from 80% to 90% */
     max-width: 800px; /* Increased from 600px to 800px */
@@ -123,13 +125,14 @@ body {
 #result {
     display: none;
     background-color: #fff;
-    margin-left: 250px;
-    margin-top: 200px;
+    position: absolute; /* Change from relative to absolute */
+    top: 50%; /* Added this line */
+    left: 50%; /* Added this line */
+    transform: translate(-50%, -50%); /* Added this line */
     padding: 20px;
     width: 90%; /* Increased from 80% to 90% */
     max-width: 800px; /* Increased from 600px to 800px */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
     padding-bottom: 100px;
 }
 
