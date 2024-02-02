@@ -94,6 +94,10 @@
 	<label for="name-input"><strong>Candidate Name:</strong><span class="required">*</span></label>
     <input type="text" id="name-input" name="name-input" placeholder="Candidate Name (Max 20 Chars)" required onchange="this.value = this.value.replace(/\s{2,}/g, ' ').trim();" maxlength="20">
         <br><br>
+        <!-- Image Input -->
+        <label for="image-input"><strong>Candidate Image:</strong></label>
+        <input type="file" id="image-input" name="image-input" accept="image/*">
+        <br><br>
 
         <!-- Declaration and Checkbox -->
         <div class="declaration-container">    

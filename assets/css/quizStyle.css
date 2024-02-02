@@ -67,6 +67,16 @@ body {
     position: relative; /* Change from absolute to relative */
 }
 
+/* Style the Profile Image input field */
+input[type="file"] {
+    border: 1px solid #000;
+    padding: 1px;
+    display: inline-block;
+    background: #fff;
+    width: 210px; /* Adjust this value as needed */
+    height: 20px; /* Adjust this value as needed */
+}
+
 /* This is the styling for the JAVA MOCK Heading on Main Page */
 .test-name-style {
   margin-top: 10px;

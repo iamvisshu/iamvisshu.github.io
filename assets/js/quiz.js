@@ -39,6 +39,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             alert('Please enter your name.');
             return;
         }
+
+        //Added for Profile image
+        let img = document.getElementById("image-input").files[0];
+        if(img)
+        {
+        // If an image was uploaded, read it as a URL and display it
+            let reader = new FileReader();
+            reader.onload = function(e)
+            {
+                document.getElementById("profile-img").src = e.target.result;
+            }
+            reader.readAsDataURL(img);
+        }
+        else
+        {
+            // If no image was uploaded, display the default image
+            document.getElementById("profile-img").src = "assets/imgs/Sample_Profile.jpg";
+        }
+
          // Add this line to hide the guidelines when the quiz starts
         document.getElementById('guidelines-container').style.display = 'none';
         document.getElementById('scrollToTopButton').style.display = 'none';
