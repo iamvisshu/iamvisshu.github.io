@@ -8729,6 +8729,7 @@ button.bg-dark:focus {
   }
 }
 
+/*Added to hide text of Social Media Links*/
 .sr-only {
   position: absolute;
   width: 1px;
