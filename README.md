@@ -1,6 +1,6 @@
-### Hi there 👋
+### Hi there 👋 I am Vishal Vishwakarma @iamvisshu.
 
-This website I've created to showcase my profile as software developer and writing technical blogs.
+I am a Senior Software Developer. This website I've created to showcase my profile as software developer and writing technical blogs.
 
 Some images,icons, css libraries etc I've used so I'm giving them credit below.
 
